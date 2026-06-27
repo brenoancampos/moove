@@ -60,6 +60,12 @@ a { color: inherit; text-decoration: none; }
 }
 .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 16px 40px -8px rgba(229,9,20,0.8); }
 
+.btn-green {
+  background: linear-gradient(135deg, #25d366, #128c4b);
+  color: #ffffff; box-shadow: 0 10px 30px -8px rgba(37,211,102,0.55);
+}
+.btn-green:hover { transform: translateY(-3px); box-shadow: 0 16px 40px -8px rgba(37,211,102,0.8); }
+
 .btn-ghost { background: rgba(255,255,255,0.04); color: var(--branco); border-color: var(--glass-bd); backdrop-filter: blur(8px); }
 .btn-ghost:hover { transform: translateY(-3px); border-color: var(--neon); box-shadow: 0 0 30px -6px rgba(229,9,20,0.5); }
 
@@ -274,8 +280,8 @@ body.intro-lock { overflow: hidden; }
 .product-body { padding: 22px 24px 26px; }
 .product-body h3 { font-size: 1.5rem; margin-bottom: 0.6rem; }
 .price { display: flex; align-items: baseline; gap: 0.8rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
-.price-old { color: var(--cinza); text-decoration: line-through; font-size: 1rem; }
-.price-now { color: var(--dourado-2); font-family: "Sora",sans-serif; font-weight: 800; font-size: 1.9rem; }
+.price-old { color: #e53935; text-decoration: line-through; font-size: 1rem; }
+.price-now { color: #25d366; font-family: "Sora",sans-serif; font-weight: 800; font-size: 1.9rem; }
 
 .features { list-style: none; margin-bottom: 1.6rem; }
 .features li { padding: 0.4rem 0 0.4rem 1.8rem; position: relative; color: var(--cinza-2); font-size: 0.94rem; border-bottom: 1px solid var(--line); }
