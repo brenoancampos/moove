@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(git --version)",
+      "PowerShell(Get-ChildItem -Force | Select-Object Mode, Name; \"---\"; Get-ChildItem -Force -Recurse -Depth 2 | Where-Object { -not $_.PSIsContainer } | Select-Object FullName | Format-Table -AutoSize -Wrap)",
+      "PowerShell(winget install --id GitHub.cli -e --accept-source-agreements --accept-package-agreements 2>&1)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); $gh = Get-Command gh -ErrorAction SilentlyContinue; if \\($gh\\) { \"gh OK: $\\($gh.Source\\)\"; gh --version | Select-Object -First 1; \"---AUTH---\"; gh auth status 2>&1 } else { \"gh ainda nao no PATH desta sessao\" })",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); gh auth status 2>&1)",
+      "PowerShell(\"GH_TOKEN set: $\\([bool]$env:GH_TOKEN\\)\"; \"GITHUB_TOKEN set: $\\([bool]$env:GITHUB_TOKEN\\)\"; $hosts = \"$env:AppData\\\\GitHub CLI\\\\hosts.yml\"; \"hosts.yml exists: $\\(Test-Path $hosts\\) \\($hosts\\)\"; if \\(Test-Path $hosts\\) { Get-Content $hosts })",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); gh auth status 2>&1; \"--- repo check ---\"; gh repo view brenoancampos/moovebox --json name,defaultBranchRef,visibility,url 2>&1)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); gh repo list --limit 100 2>&1)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); \"Total repos:\"; gh api 'user/repos?per_page=100&type=all' --jq 'length' 2>&1; \"--- names ---\"; gh api 'user/repos?per_page=100&type=all' --jq '.[].full_name' 2>&1)",
+      "Bash(git config *)",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\breno\\\\site moovebox\\\\index.html\")",
+      "PowerShell(\"Abrindo o site no navegador padrao...\")",
+      "Bash(python -c \"import PIL; print\\('Pillow OK', PIL.__version__\\)\")",
+      "PowerShell(\"Site aberto no navegador padrao.\")",
+      "PowerShell(\"Site aberto.\")",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); \"--- repos no GitHub ---\"; gh repo list --limit 20 2>&1)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); gh auth setup-git 2>&1; \"Credencial do git configurada via gh.\")",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(gh repo *)",
+      "Bash(git commit *)"
+    ]
+  }
+}

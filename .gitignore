@@ -1,0 +1,6 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+# screenshot solto (nao faz parte do site)
+index-screenshot.png
