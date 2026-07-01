@@ -235,8 +235,11 @@ body.intro-lock { overflow: hidden; }
 .glass { background: var(--glass); border: 1px solid var(--glass-bd); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-radius: var(--radius); }
 
 /* ===================== PRODUTOS ===================== */
-.products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; align-items: start; }
-.product-card { overflow: hidden; position: relative; transition: transform 0.4s var(--ease), border-color 0.4s, box-shadow 0.4s; }
+.products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
+.product-card { overflow: hidden; position: relative; display: flex; flex-direction: column; transition: transform 0.4s var(--ease), border-color 0.4s, box-shadow 0.4s; }
+/* link que cobre o card inteiro (deixa o card todo clicável) */
+.card-cover { position: absolute; inset: 0; z-index: 1; border-radius: var(--radius); }
+.product-card .photo-frame, .product-card .btn { position: relative; z-index: 2; }
 .product-card:hover { transform: translateY(-8px); border-color: rgba(229,9,20,0.5); box-shadow: 0 30px 70px -30px rgba(229,9,20,0.4); }
 .product-card.featured { border-color: rgba(229,9,20,0.4); box-shadow: 0 0 0 1px rgba(229,9,20,0.2), 0 30px 80px -40px rgba(229,9,20,0.5); }
 .ribbon { position: absolute; top: 18px; right: 18px; z-index: 2; background: linear-gradient(100deg, var(--dourado-2), var(--dourado)); color: #ffffff; font-family: "Sora",sans-serif; font-weight: 700; font-size: 0.72rem; padding: 0.35rem 0.85rem; border-radius: 999px; letter-spacing: 0.05em; }
@@ -248,13 +251,30 @@ body.intro-lock { overflow: hidden; }
 
 /* ===================== IMAGENS (tratamento profissional/comercial) ===================== */
 /* Realce de cor/contraste, enquadramento uniforme, cantos arredondados e zoom suave */
-.photo-frame { position: relative; overflow: hidden; border-radius: 14px; }
+.photo-frame { position: relative; display: block; overflow: hidden; border-radius: 14px; }
 .product-photo {
   width: 100%; aspect-ratio: 16/10; object-fit: cover; object-position: center 60%; display: block;
   filter: contrast(1.06) saturate(1.14) brightness(1.03);
   transition: transform 0.7s var(--ease);
 }
 .product-card:hover .product-photo { transform: scale(1.06); }
+/* Imagem da Plataforma 360° no card: mostra o produto inteiro sobre fundo escuro da marca */
+.photo-360 { object-fit: contain; background: radial-gradient(circle at 50% 42%, #1a0a0c, #000 75%); padding: 5%; }
+
+/* Placeholder ilustrativo (Plataforma 360° — enquanto não há foto real) */
+.placeholder-360 {
+  width: 100%; aspect-ratio: 16/10; display: grid; place-content: center; gap: 0.4rem;
+  text-align: center; border-radius: 14px;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(229,9,20,0.18), transparent 60%),
+    repeating-conic-gradient(from 0deg at 50% 50%, #141414 0deg 12deg, #0d0d0d 12deg 24deg);
+}
+.placeholder-360 .ph-360 {
+  font-family: "Sora", sans-serif; font-weight: 800; font-size: clamp(2.2rem, 5vw, 3rem);
+  background: linear-gradient(100deg, #ffffff, var(--dourado)); -webkit-background-clip: text;
+  background-clip: text; -webkit-text-fill-color: transparent;
+}
+.placeholder-360 .ph-sub { color: var(--cinza); font-size: 0.8rem; letter-spacing: 0.02em; }
 
 /* Foto de destaque do hero */
 .hero-photo {
@@ -277,7 +297,8 @@ body.intro-lock { overflow: hidden; }
   filter: contrast(1.05) saturate(1.1);
 }
 
-.product-body { padding: 22px 24px 26px; }
+.product-body { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+.product-body .btn { margin-top: auto; }
 .product-body h3 { font-size: 1.5rem; margin-bottom: 0.6rem; }
 .price { display: flex; align-items: baseline; gap: 0.8rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
 .price-old { color: #e53935; text-decoration: line-through; font-size: 1rem; }
@@ -431,6 +452,7 @@ body.intro-lock { overflow: hidden; }
   .timeline { grid-template-columns: 1fr 1fr; }
   .timeline::before { display: none; }
   .cards-grid, .cards-grid.cols-3, .cards-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+  .products { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
 }
 
 @media (max-width: 760px) {

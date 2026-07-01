@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plataforma 360° Moove Box: transforme cada evento em renda. Estrutura em ferro, ring light, LED e consultoria completa inclusa. De R$ 2.990 por R$ 2.498." />
+  <title>Plataforma 360° — Moove Box | Transforme eventos em renda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="plataforma-360.css" />
+</head>
+<body>
+
+  <!-- Fundo tecnológico -->
+  <div class="tech-bg" aria-hidden="true">
+    <div class="tech-grid"></div>
+    <div class="tech-orb orb-1"></div>
+    <div class="tech-orb orb-2"></div>
+    <div class="tech-scan"></div>
+  </div>
+
+  <!-- ===================== TOPO ===================== -->
+  <header class="lp-nav" id="topo">
+    <div class="lp-container nav-inner">
+      <a href="index.html" class="logo" aria-label="Moove Box - voltar ao site">
+        <img src="logo.png" alt="Moove Box" class="logo-img" />
+      </a>
+      <a href="https://wa.me/5531971726359?text=Ol%C3%A1!%20Quero%20garantir%20minha%20Plataforma%20360%C2%B0%20da%20Moove%20Box%20(promo%C3%A7%C3%A3o%20R%24%202.498)." target="_blank" rel="noopener" class="btn btn-green nav-cta">
+        <span class="wa-ico" aria-hidden="true"></span> Garantir agora
+      </a>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="lp-container hero-inner">
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><span class="dot"></span> PLATAFORMA 360° • MOOVE BOX</span>
+        <h1>Transforme cada evento em uma <span class="neon-text">máquina de fazer dinheiro.</span></h1>
+        <p class="lead">A atração que todo mundo quer gravar — e que <strong>se paga em poucas festas.</strong> Você não leva só o equipamento: leva um <strong>negócio pronto</strong>, com a consultoria que ensina você a lotar a agenda.</p>
+
+        <div class="offer-box">
+          <div class="offer-prices">
+            <span class="price-old">R$ 2.990,00</span>
+            <span class="price-now">R$ 2.498,00</span>
+            <span class="offer-tag">Consultoria inclusa</span>
+          </div>
+          <div class="countdown" id="countdown" aria-label="Oferta por tempo limitado">
+            <span class="cd-label">⚡ Oferta acaba em</span>
+            <div class="cd-clock">
+              <div><b id="cdH">00</b><small>h</small></div>
+              <span class="cd-sep">:</span>
+              <div><b id="cdM">00</b><small>min</small></div>
+              <span class="cd-sep">:</span>
+              <div><b id="cdS">00</b><small>seg</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/5531971726359?text=Ol%C3%A1!%20Quero%20garantir%20minha%20Plataforma%20360%C2%B0%20da%20Moove%20Box%20(promo%C3%A7%C3%A3o%20R%24%202.498)." target="_blank" rel="noopener" class="btn btn-green btn-lg">
+            <span class="wa-ico" aria-hidden="true"></span> Quero minha Plataforma 360°
+          </a>
+          <a href="#incluso" class="btn btn-ghost btn-lg">Ver tudo que vem incluso</a>
+        </div>
+
+        <ul class="trust-line">
+          <li>✓ Praticamente sem manutenção</li>
+          <li>✓ Garantia</li>
+          <li>✓ Suporte especializado</li>
+        </ul>
+      </div>
+
+      <!-- Plataforma 360 girando (3D em CSS puro) -->
+      <div class="hero-rig reveal">
+        <div class="platform-hero" id="platformHero">
+          <span class="ph-aura"></span>
+          <img src="imagens/plataforma3d.png" alt="Plataforma 360° Moove Box" class="ph-img" />
+        </div>
+        <p class="rig-caption">Gire. Grave. Fature.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== POR QUE É FEBRE ===================== -->
+  <section class="section">
+    <div class="lp-container">
+      <div class="section-head reveal">
+        <span class="kicker">A febre dos eventos</span>
+        <h2>Todo evento quer. Você fatura com isso.</h2>
+        <p class="section-sub">Vídeos 360° viralizam, encantam os convidados e são presença garantida em festas. Você compra uma vez e fatura em casamentos, 15 anos, formaturas, aniversários e eventos corporativos — o ano inteiro.</p>
+      </div>
+      <div class="photo-rail-wrap reveal">
+        <button class="rail-btn prev" id="railPrev" aria-label="Ver fotos anteriores">‹</button>
+        <div class="photo-rail" id="photoRail">
+          <!-- INSERIR: troque cada .slot-inner por <img class="slot-photo" src="imagens/SUA-FOTO.jpg" alt="..."> quando tiver as fotos -->
+          <figure class="photo-slot reveal-x"><div class="slot-inner"><span>📸</span><b>Sua foto aqui</b><small>Evento 1</small></div></figure>
+          <figure class="photo-slot reveal-x"><div class="slot-inner"><span>📸</span><b>Sua foto aqui</b><small>Evento 2</small></div></figure>
+          <figure class="photo-slot reveal-x"><div class="slot-inner"><span>📸</span><b>Sua foto aqui</b><small>Evento 3</small></div></figure>
+          <figure class="photo-slot reveal-x"><div class="slot-inner"><span>📸</span><b>Sua foto aqui</b><small>Evento 4</small></div></figure>
+          <figure class="photo-slot reveal-x"><div class="slot-inner"><span>📸</span><b>Sua foto aqui</b><small>Evento 5</small></div></figure>
+          <figure class="photo-slot reveal-x"><div class="slot-inner"><span>📸</span><b>Sua foto aqui</b><small>Evento 6</small></div></figure>
+        </div>
+        <button class="rail-btn next" id="railNext" aria-label="Ver mais fotos">›</button>
+      </div>
+      <p class="rail-hint">← Arraste para o lado para ver mais fotos →</p>
+    </div>
+  </section>
+
+  <!-- ===================== ESPECIFICAÇÕES TÉCNICAS ===================== -->
+  <section class="section section-tech">
+    <div class="lp-container">
+      <div class="section-head reveal">
+        <span class="kicker">Engenharia de verdade</span>
+        <h2>Construída para trabalhar (e durar)</h2>
+        <p class="section-sub">Nada de equipamento frágil. A Plataforma 360° da Moove Box é robusta, estável e feita para rodar evento após evento.</p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-card reveal">
+          <span class="spec-ic"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg></span>
+          <h4>Estrutura robusta em ferro</h4><p>Base firme e resistente, pronta para uso intenso.</p>
+        </div>
+        <div class="spec-card reveal">
+          <span class="spec-ic"><svg viewBox="0 0 24 24"><path d="M5 4v12M12 4v12M19 4v12"/><circle cx="5" cy="19" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg></span>
+          <h4>9 pés niveladores</h4><p>Estabilidade perfeita em qualquer piso, sem balançar.</p>
+        </div>
+        <div class="spec-card reveal">
+          <span class="spec-ic"><svg viewBox="0 0 24 24"><path d="M12 2v20"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg></span>
+          <h4>Haste em alumínio</h4><p>Leve, alta e resistente — sobe sem perder firmeza.</p>
+        </div>
+        <div class="spec-card reveal">
+          <span class="spec-ic"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
+          <h4>Suporte de celular robusto</h4><p>Segura qualquer smartphone com firmeza total.</p>
+        </div>
+        <div class="spec-card reveal">
+          <span class="spec-ic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M21 10v4"/><path d="M7 12h4"/></svg></span>
+          <h4>Suporte de power bank</h4><p>Energia o evento inteiro, sem ficar sem bateria.</p>
+        </div>
+        <div class="spec-card reveal">
+          <span class="spec-ic"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="3"/><circle cx="12" cy="8" r="1.6"/><path d="M10 13h4M10 16h4"/></svg></span>
+          <h4>Controle de acionamento</h4><p>Inicie a gravação na hora certa, sem complicação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== JÁ VEM NA CAIXA ===================== -->
+  <section class="section" id="incluso">
+    <div class="lp-container">
+      <div class="section-head reveal">
+        <span class="kicker">Já vem na caixa</span>
+        <h2>Você abre e já sai faturando</h2>
+      </div>
+      <div class="box-grid">
+        <div class="box-item reveal"><span class="box-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></span><h4>Ring light</h4><p>Iluminação profissional para vídeos impecáveis.</p></div>
+        <div class="box-item reveal"><span class="box-ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12c1 1 1 2 1 3h6c0-1 0-2 1-3a7 7 0 0 0-4-12Z"/></svg></span><h4>LED</h4><p>Efeito de luz que dá o toque premium na atração.</p></div>
+        <div class="box-item reveal"><span class="box-ic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M21 10v4"/><path d="M9 9l-2 4h3l-2 4"/></svg></span><h4>Power bank <em>de brinde</em></h4><p>Você já recebe a energia extra inclusa, sem custo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BÔNUS / CONSULTORIA ===================== -->
+  <section class="section section-bonus">
+    <div class="lp-container">
+      <div class="section-head reveal">
+        <span class="kicker">O grande diferencial</span>
+        <h2>Você não compra um equipamento.<br/><span class="neon-text">Você recebe um negócio.</span></h2>
+        <p class="section-sub">Junto com a sua Plataforma 360° vai uma consultoria completa para você não ficar perdido — tudo que precisa para ter sucesso, do primeiro contrato ao primeiro lucro.</p>
+      </div>
+
+      <div class="bonus-grid">
+        <div class="bonus-card reveal"><span class="bonus-ic">🎯</span><h4>Captação de clientes</h4><p>Dicas práticas para fechar seus primeiros eventos rápido.</p></div>
+        <div class="bonus-card reveal"><span class="bonus-ic">📄</span><h4>Modelo de contrato</h4><p>Contrato pronto para locar com total segurança.</p></div>
+        <div class="bonus-card reveal"><span class="bonus-ic">📲</span><h4>Software da plataforma</h4><p>Indicação e orientação completa de uso do aplicativo.</p></div>
+        <div class="bonus-card reveal"><span class="bonus-ic">🖼️</span><h4>Pack com +300 molduras</h4><p>Mais de 300 molduras para deixar cada vídeo único.</p></div>
+        <div class="bonus-card reveal"><span class="bonus-ic">🎵</span><h4>100 músicas cortadas</h4><p>100 trilhas já editadas e prontas para usar na hora.</p></div>
+        <div class="bonus-card reveal"><span class="bonus-ic">🤝</span><h4>Consultoria completa</h4><p>Acompanhamento para você começar com o pé direito.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OFERTA ===================== -->
+  <section class="section section-offer" id="oferta">
+    <div class="lp-container">
+      <div class="offer-card reveal">
+        <span class="kicker center">Oferta por tempo limitado</span>
+        <h2>Leve tudo isso hoje por um único valor</h2>
+        <div class="offer-stack">
+          <p class="offer-includes">Plataforma 360° completa + ring light + LED + power bank + <strong>consultoria completa</strong> + 300 molduras + 100 músicas.</p>
+          <div class="offer-prices big">
+            <span class="price-old">De R$ 2.990,00</span>
+            <span class="price-now">R$ 2.498,00</span>
+          </div>
+          <div class="countdown solo" aria-label="Oferta por tempo limitado">
+            <span class="cd-label">⚡ A promoção acaba em</span>
+            <div class="cd-clock">
+              <div><b id="cdH2">00</b><small>h</small></div>
+              <span class="cd-sep">:</span>
+              <div><b id="cdM2">00</b><small>min</small></div>
+              <span class="cd-sep">:</span>
+              <div><b id="cdS2">00</b><small>seg</small></div>
+            </div>
+          </div>
+          <a href="https://wa.me/5531971726359?text=Ol%C3%A1!%20Quero%20garantir%20minha%20Plataforma%20360%C2%B0%20da%20Moove%20Box%20(promo%C3%A7%C3%A3o%20R%24%202.498)." target="_blank" rel="noopener" class="btn btn-green btn-xl">
+            <span class="wa-ico" aria-hidden="true"></span> Garantir minha Plataforma 360°
+          </a>
+          <div class="secure-row">
+            <span>🔒 Compra segura</span><span>🛡️ Garantia</span><span>🎧 Suporte especializado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GARANTIA ===================== -->
+  <section class="section">
+    <div class="lp-container">
+      <div class="guarantee-card reveal">
+        <span class="guarantee-seal">🛡️</span>
+        <div>
+          <h3>Sua compra protegida</h3>
+          <p>Equipamento de alta qualidade, com garantia e suporte especializado da Moove Box. Você investe com tranquilidade e foca no que importa: faturar com os seus eventos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section">
+    <div class="lp-container narrow">
+      <div class="section-head reveal">
+        <span class="kicker">Perguntas frequentes</span>
+        <h2>Ainda com dúvidas?</h2>
+      </div>
+      <div class="faq reveal">
+        <details class="faq-item"><summary>Quanto custa e o que está incluso?</summary><p>De R$ 2.990 por <strong>R$ 2.498</strong>, com a consultoria completa inclusa, pack de 300 molduras, 100 músicas cortadas, ring light, LED e power bank de brinde.</p></details>
+        <details class="faq-item"><summary>Precisa de manutenção?</summary><p>Praticamente não. A estrutura é robusta, em ferro, feita para uso intenso sem dor de cabeça.</p></details>
+        <details class="faq-item"><summary>Eu nunca trabalhei com isso. Consigo?</summary><p>Sim! Por isso entregamos a consultoria completa: captação de clientes, modelo de contrato e uso do software. Você começa orientado do zero.</p></details>
+        <details class="faq-item"><summary>Em quais eventos posso usar?</summary><p>Casamentos, 15 anos, formaturas, aniversários, eventos corporativos, feiras e festas em geral.</p></details>
+        <details class="faq-item"><summary>Como recebo o pack de molduras e músicas?</summary><p>Tudo é entregue junto com a plataforma e a consultoria. Você já sai pronto para gravar.</p></details>
+        <details class="faq-item"><summary>Como faço para comprar?</summary><p>É só clicar em qualquer botão de WhatsApp desta página. Nosso time te atende e finaliza tudo com você.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CHAMADA FINAL ===================== -->
+  <section class="cta-final">
+    <div class="lp-container reveal">
+      <h2>Comece hoje. <span class="neon-text">Seu equipamento trabalha por você.</span></h2>
+      <p>Garanta sua Plataforma 360° com a consultoria completa antes que a promoção acabe.</p>
+      <a href="https://wa.me/5531971726359?text=Ol%C3%A1!%20Quero%20garantir%20minha%20Plataforma%20360%C2%B0%20da%20Moove%20Box%20(promo%C3%A7%C3%A3o%20R%24%202.498)." target="_blank" rel="noopener" class="btn btn-green btn-xl">
+        <span class="wa-ico" aria-hidden="true"></span> Quero garantir minha Plataforma 360°
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="lp-footer">
+    <div class="lp-container footer-inner">
+      <a href="index.html" class="logo logo-footer"><img src="logo.png" alt="Moove Box" class="logo-img" /></a>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/5531971726359" target="_blank" rel="noopener">WhatsApp: (31) 97172-6359</a></li>
+        <li><a href="https://instagram.com/moovebox360" target="_blank" rel="noopener">Instagram: @moovebox360</a></li>
+        <li>Santa Luzia — MG</li>
+        <li><a href="index.html">← Voltar ao site</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">© 2026 Moove Box. Todos os direitos reservados. <span class="disc">*Estimativa ilustrativa; resultados variam conforme região e demanda.</span></div>
+  </footer>
+
+  <!-- Ícone flutuante do WhatsApp (igual ao site) -->
+  <a href="https://wa.me/5531971726359?text=Ol%C3%A1!%20Quero%20garantir%20minha%20Plataforma%20360%C2%B0%20da%20Moove%20Box%20(promo%C3%A7%C3%A3o%20R%24%202.498)." class="whats-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32" width="32" height="32" fill="currentColor" aria-hidden="true">
+      <path d="M16.04 4C9.93 4 4.98 8.95 4.98 15.06c0 1.95.51 3.86 1.48 5.54L4.9 26.9l6.46-1.53a11.1 11.1 0 0 0 4.68 1.05h.01c6.11 0 11.06-4.95 11.06-11.06 0-2.95-1.15-5.73-3.24-7.82A11 11 0 0 0 16.04 4Zm0 20.27h-.01c-1.5 0-2.97-.4-4.26-1.17l-.31-.18-3.83.91.94-3.73-.2-.32a9.2 9.2 0 0 1-1.41-4.92c0-5.08 4.13-9.21 9.21-9.21 2.46 0 4.77.96 6.51 2.7a9.16 9.16 0 0 1 2.7 6.52c0 5.08-4.13 9.2-9.21 9.2Zm5.05-6.89c-.28-.14-1.64-.81-1.89-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.59.07-.28-.14-1.17-.43-2.22-1.37-.82-.73-1.38-1.64-1.54-1.92-.16-.28-.02-.43.12-.57.13-.13.28-.32.41-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.02-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.28-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.84.14.18 1.94 2.96 4.7 4.15.66.28 1.17.45 1.57.58.66.21 1.26.18 1.74.11.53-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.18-.53-.32Z"/>
+    </svg>
+  </a>
+
+  <script src="plataforma-360.js"></script>
+</body>
+</html>
