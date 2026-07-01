@@ -183,6 +183,29 @@ a { color: inherit; text-decoration: none; }
 .box-item h4 em { color: var(--neon-2); font-style: normal; }
 .box-item p { color: var(--cinza); font-size: 0.92rem; }
 
+/* ===================== FOTOS REAIS (showcase com efeitos) ===================== */
+.showcase-photo { position: relative; border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-bd); background: #0e0e10;
+  box-shadow: 0 34px 80px -34px rgba(0,0,0,0.85);
+  transition: transform 0.5s var(--ease), border-color 0.4s, box-shadow 0.4s; }
+.showcase-photo img { display: block; width: 100%; height: auto; transition: transform 0.9s var(--ease); }
+/* brilho vermelho sutil que acende no hover */
+.showcase-photo::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 0.5s;
+  background: radial-gradient(130% 72% at 50% 0%, rgba(255,45,45,0.18), transparent 55%); }
+.showcase-photo:hover { transform: translateY(-6px); border-color: var(--neon); box-shadow: 0 48px 100px -34px rgba(0,0,0,0.9), 0 0 48px -10px var(--neon-soft); }
+.showcase-photo:hover img { transform: scale(1.05); }
+.showcase-photo:hover::after { opacity: 1; }
+/* etiqueta flutuante sobre a foto */
+.showcase-tag { position: absolute; left: 16px; bottom: 16px; z-index: 2; display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.45rem 0.85rem; border-radius: 999px; font-family: "Sora", sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: #fff;
+  background: rgba(8,8,10,0.55); border: 1px solid var(--glass-bd); backdrop-filter: blur(8px); }
+.showcase-tag .tag-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--neon); box-shadow: 0 0 8px var(--neon); }
+/* foto-beleza vertical, centralizada */
+.showcase-portrait { max-width: 400px; margin: 0 auto 34px; }
+/* especificações: foto de dimensões + cards lado a lado */
+.tech-showcase { display: grid; grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.35fr); gap: 34px; align-items: center; }
+/* acessórios: banner largo */
+.box-photo { margin: 0 auto 36px; max-width: 900px; }
+
 /* Bônus */
 .section-bonus { background: linear-gradient(180deg, var(--preto-2), transparent); }
 .bonus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -273,9 +296,15 @@ a { color: inherit; text-decoration: none; }
 .reveal.visible { opacity: 1; transform: none; }
 
 /* ===================== RESPONSIVO ===================== */
+/* no desktop: foto de dimensões à esquerda, cards em 2 colunas à direita */
+@media (min-width: 941px) {
+  .tech-showcase .specs-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 940px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-rig { order: -1; margin-bottom: 10px; }
+  .tech-showcase { grid-template-columns: 1fr; gap: 26px; }
+  .showcase-portrait { max-width: 340px; }
   .specs-grid, .box-grid, .bonus-grid { grid-template-columns: 1fr 1fr; }
   .stats-row { grid-template-columns: 1fr 1fr; }
 }
