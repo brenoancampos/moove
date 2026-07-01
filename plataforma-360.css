@@ -120,18 +120,31 @@ a { color: inherit; text-decoration: none; }
 
 /* ===================== PLATAFORMA EM DESTAQUE (imagem + efeitos) ===================== */
 .hero-rig { display: flex; flex-direction: column; align-items: center; perspective: 1000px; }
-.platform-hero { position: relative; width: min(480px, 92vw); aspect-ratio: 4/3; display: grid; place-items: center; transform-style: preserve-3d; transition: transform 0.25s ease; }
+.platform-hero { position: relative; width: min(360px, 80vw); display: grid; place-items: center; transform-style: preserve-3d; transition: transform 0.25s ease; }
+/* entorno na MESMA tonalidade do fundo do vídeo (#141415) — some a borda retangular */
+.platform-hero::before { content: ""; position: absolute; z-index: 0; inset: -22% -26%;
+  background: radial-gradient(ellipse 52% 56% at 50% 49%, #141415 0%, #141415 34%, rgba(20,20,21,0.85) 52%, rgba(20,20,21,0.35) 68%, transparent 80%);
+  filter: blur(16px); pointer-events: none; }
 /* aura vermelha pulsante atrás */
-.ph-aura { position: absolute; z-index: 1; width: 78%; height: 60%; top: 30%; border-radius: 50%; background: radial-gradient(circle, rgba(255,45,45,0.5), transparent 62%); filter: blur(38px); animation: phAura 3.2s ease-in-out infinite; }
-@keyframes phAura { 50% { opacity: 0.6; transform: scale(1.08); } }
+.ph-aura { position: absolute; z-index: 1; width: 80%; height: 46%; top: 33%; left: 50%; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, rgba(255,45,45,0.42), transparent 62%); filter: blur(44px); animation: phAura 3.2s ease-in-out infinite; }
+@keyframes phAura { 50% { opacity: 0.6; transform: translateX(-50%) scale(1.08); } }
 /* anel de luz girando na base (sensação de rotação) */
 .ph-spin { position: absolute; z-index: 2; bottom: 14%; left: 50%; width: 58%; aspect-ratio: 1; transform: translateX(-50%) rotateX(72deg); border-radius: 50%; background: conic-gradient(from 0deg, transparent 0deg, rgba(255,90,90,0.6) 55deg, transparent 130deg, rgba(255,45,45,0.5) 235deg, transparent 320deg); filter: blur(6px); opacity: 0.7; animation: phSpin 4.5s linear infinite; }
 @keyframes phSpin { to { transform: translateX(-50%) rotateX(72deg) rotate(360deg); } }
-/* imagem flutuando, com bordas pretas derretendo no fundo */
-.ph-img { position: relative; z-index: 3; width: 100%; display: block; filter: drop-shadow(0 26px 40px rgba(0,0,0,0.7)); animation: phFloat 5s ease-in-out infinite;
-  -webkit-mask-image: radial-gradient(ellipse 74% 88% at 50% 50%, #000 64%, transparent 100%);
-  mask-image: radial-gradient(ellipse 74% 88% at 50% 50%, #000 64%, transparent 100%); }
+/* vídeo flutuando, com as 4 bordas derretendo no fundo (loop, sem som) */
+.ph-video { position: relative; z-index: 3; height: min(600px, 62vh); width: auto; max-width: 100%; display: block;
+  filter: drop-shadow(0 24px 40px rgba(0,0,0,0.5)); animation: phFloat 5s ease-in-out infinite;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, #000 13%, #000 87%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0, #000 13%, #000 87%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+  mask-composite: intersect; }
 @keyframes phFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+/* acessibilidade: para quem prefere menos movimento, sem flutuação */
+@media (prefers-reduced-motion: reduce) { .ph-video, .ph-aura { animation: none; } }
 .rig-caption { margin-top: 1.2rem; font-family: "Sora", sans-serif; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.85rem; color: var(--cinza-2); }
 
 /* ===================== SECTIONS ===================== */
