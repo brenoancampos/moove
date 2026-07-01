@@ -291,6 +291,27 @@ body.intro-lock { overflow: hidden; }
   background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.35));
 }
 
+/* Hero com a foto dos fundadores (PNG recortado, sem fundo) */
+.hero-photo--people {
+  max-width: 500px; border-radius: 0; overflow: visible; box-shadow: none; background: transparent;
+  display: grid; place-items: center;
+}
+.hero-photo--people::after { display: none; }
+.hero-photo--people .people-glow {
+  position: absolute; z-index: 0; width: 84%; height: 72%; left: 50%; top: 47%;
+  transform: translate(-50%, -50%); border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 45%, rgba(229,9,20,0.30), transparent 66%);
+  filter: blur(48px); animation: peopleGlow 4s ease-in-out infinite;
+}
+.hero-photo--people img {
+  position: relative; z-index: 1; width: 100%; aspect-ratio: auto; object-fit: contain;
+  filter: contrast(1.02) saturate(1.04);
+  /* degradê suave dissolvendo a parte de baixo da foto no fundo */
+  -webkit-mask-image: linear-gradient(to bottom, #000 74%, transparent 92%);
+  mask-image: linear-gradient(to bottom, #000 74%, transparent 92%);
+}
+@keyframes peopleGlow { 50% { opacity: 0.72; transform: translate(-50%, -50%) scale(1.06); } }
+
 /* Fotos do carrossel */
 .car-photo {
   flex: 0 0 100%; width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;
