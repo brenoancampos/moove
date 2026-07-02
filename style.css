@@ -295,6 +295,7 @@ body.intro-lock { overflow: hidden; }
 .hero-photo--people {
   max-width: 500px; border-radius: 0; overflow: visible; box-shadow: none; background: transparent;
   display: grid; place-items: center;
+  animation: none; /* foto parada, sem flutuar */
 }
 .hero-photo--people::after { display: none; }
 .hero-photo--people .people-glow {
@@ -464,8 +465,10 @@ body.intro-lock { overflow: hidden; }
 
 /* ===================== RESPONSIVO ===================== */
 @media (max-width: 980px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-visual { order: -1; margin-bottom: 20px; }
+  .hero { padding-top: 100px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 0; }
+  /* foto sobe e o degrade de baixo dela encosta no comeco do titulo */
+  .hero-visual { order: -1; margin-bottom: -56px; }
   .led-floor { max-width: 300px; }
   .calc { grid-template-columns: 1fr; }
   .calc-controls { border-right: 0; border-bottom: 1px solid var(--line); }
