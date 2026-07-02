@@ -320,6 +320,8 @@ a { color: inherit; text-decoration: none; }
   .specs-grid, .box-grid, .bonus-grid, .stats-row { grid-template-columns: 1fr; }
   .guarantee-card { flex-direction: column; text-align: center; }
   .hero { padding-top: 120px; }
+  /* botoes de CTA menores no celular para nao estourar a largura da tela */
+  .btn-lg, .btn-xl { padding: 0.8rem 1.1rem; font-size: 0.9rem; white-space: normal; max-width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
